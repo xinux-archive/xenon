@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-theme-yuu",
+  "name": "vuepress-theme-xenon",
   "version": "2.3.0",
   "description": "A VuePress theme that supports multiple color themes and some other useful features.",
   "keywords": [
@@ -13,8 +13,8 @@
     "options"
   ],
   "main": "index.js",
-  "repository": "https://github.com/Danktuary/vuepress-theme-yuu.git",
-  "author": "Sanctuary <sanc.pw@gmail.com>",
+  "repository": "https://github.com/xinuxuz/xenon.git",
+  "author": "Genemator <genemators@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext js,vue"
