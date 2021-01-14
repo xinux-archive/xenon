@@ -12,11 +12,11 @@
 			</li>
 		</ul>
 		<div v-if="!xenon.disableDarkTheme" class="dark-theme-options toggle-option">
-			<label for="dark-theme-toggle">{{ xenon.labels.darkTheme }}</label>
+			<label for="dark-theme-toggle">Tungi ko'rinish yoqish</label>
 			<input id="dark-theme-toggle" v-model="darkTheme" type="checkbox" @change="toggleDarkTheme" />
 		</div>
 		<div v-if="xenon.hasThemes && !xenon.disableThemeIgnore" class="force-theme-options toggle-option">
-			<label for="force-theme-toggle">{{ xenon.labels.forcedThemes }}</label>
+			<label for="force-theme-toggle">Majburiy qiyofani o'chirish</label>
 			<input id="force-theme-toggle" v-model="ignoreForcedThemes" type="checkbox" @change="toggleForcedThemes" />
 		</div>
 		<div v-if="xenon.extraOptions && xenon.extraOptions.below" class="user-options-below">
