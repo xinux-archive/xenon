@@ -890,13 +890,6 @@ vue-eslint-parser@^3.2.1:
     esquery "^1.0.1"
     lodash "^4.17.10"
 
-vuepress-theme-yuu@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-yuu/-/vuepress-theme-yuu-2.3.0.tgz#2f38802bb579d5c64d2fcd450ca16168a25fa14b"
-  integrity sha512-QzGf5kAF8+4fTS6fFtg4o8mqEmiOm525oOw1cWWG+iUN9FWp/yaDlT4RN1xs2km8CNs1st9HvbGksLI1IhJK/Q==
-  dependencies:
-    vue-click-outside "^1.0.7"
-
 which@^1.2.9:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
