@@ -7,7 +7,7 @@
     "theme"
   ],
   "main": "index.js",
-  "repository": "https://github.com/xinuxuz/vuepress-theme-xenon.git",
+  "repository": "https://github.com/xinuxuz/xenon.git",
   "author": "Genemator <genemators@gmail.com>",
   "license": "MIT",
   "scripts": {
