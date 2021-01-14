@@ -17,8 +17,8 @@ export default {
 			disableThemeIgnore: xenon.disableThemeIgnore || false,
 			extraOptions: xenon.extraOptions || {},
 			labels: {
-				darkTheme: labels.darkTheme || "Tungi ko'rinish yoqish",
-				forcedThemes: labels.forcedThemes || "Majburiy interfeys o'chirish",
+				darkTheme: labels.darkTheme || "Enable Dark Theme?",
+				forcedThemes: labels.forcedThemes || "Ignore Forced Themes?",
 			},
 		};
 
