@@ -4,14 +4,14 @@
 
 <script>
 import ParentLayout from '@parent-theme/layouts/Layout.vue';
-import yuuConfig from '@theme/mixins/yuuConfig.js';
+import xenonConfig from '@theme/mixins/xenonConfig.js';
 import themeHandler from '@theme/mixins/themeHandler.js';
 
 export default {
 	components: {
 		ParentLayout,
 	},
-	mixins: [yuuConfig, themeHandler],
+	mixins: [xenonConfig, themeHandler],
 	watch: {
 		'$page.frontmatter.home'(isHome) {
 			if (isHome) this.setPageTheme();
