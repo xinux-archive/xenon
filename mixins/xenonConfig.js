@@ -17,8 +17,8 @@ export default {
 			disableThemeIgnore: xenon.disableThemeIgnore || false,
 			extraOptions: xenon.extraOptions || {},
 			labels: {
-				darkTheme: labels.darkTheme || "Tungi rejim",
-				forcedThemes: labels.forcedThemes || "Majburiy rejim",
+				darkTheme: labels.darkTheme || 'Tungi rejim',
+				forcedThemes: labels.forcedThemes || 'Majburiy rejim',
 			},
 		};
 
