@@ -17,8 +17,8 @@ export default {
 			disableThemeIgnore: xenon.disableThemeIgnore || false,
 			extraOptions: xenon.extraOptions || {},
 			labels: {
-				darkTheme: labels.darkTheme || "Tungi qiyofa?",
-				forcedThemes: labels.forcedThemes || "Qifoyalarni taqiqlash?",
+				darkTheme: labels.darkTheme || 'Tungi qiyofa?',
+				forcedThemes: labels.forcedThemes || 'Qifoyalarni taqiqlash?',
 			},
 		};
 
