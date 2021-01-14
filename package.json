@@ -1,16 +1,10 @@
 {
   "name": "vuepress-theme-xenon",
-  "version": "2.3.7",
-  "description": "A VuePress theme that supports multiple color themes and some other useful features.",
+  "version": "2.3.8",
+  "description": "Xinux jamiyati websayti uchun yaratilgan shaxsiy website dizayn moduli",
   "keywords": [
     "vuepress",
-    "theme",
-    "xenon",
-    "vuepress-theme",
-    "colors",
-    "vue",
-    "customize",
-    "options"
+    "tema"
   ],
   "main": "index.js",
   "repository": "https://github.com/xinuxuz/xenon.git",
