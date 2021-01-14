@@ -1,38 +1,38 @@
 <template>
 	<div class="theme-options">
-		<div v-if="xenon.extraOptions && xenon.extraOptions.above" class="user-options-above">
-			<component :is="xenon.extraOptions.above" />
+		<div v-if="yuu.extraOptions && yuu.extraOptions.above" class="user-options-above">
+			<component :is="yuu.extraOptions.above" />
 		</div>
-		<ul v-if="xenon.hasThemes" class="color-theme-options">
+		<ul v-if="yuu.hasThemes" class="color-theme-options">
 			<li>
 				<a href="#" class="default-theme" @click.prevent="setTheme()"></a>
 			</li>
-			<li v-for="color in xenon.themes" :key="color">
+			<li v-for="color in yuu.themes" :key="color">
 				<a href="#" :class="`${color}-theme`" @click.prevent="setTheme(color)"></a>
 			</li>
 		</ul>
-		<div v-if="!xenon.disableDarkTheme" class="dark-theme-options toggle-option">
-			<label for="dark-theme-toggle">{{ xenon.labels.darkTheme }}</label>
+		<div v-if="!yuu.disableDarkTheme" class="dark-theme-options toggle-option">
+			<label for="dark-theme-toggle">{{ yuu.labels.darkTheme }}</label>
 			<input id="dark-theme-toggle" v-model="darkTheme" type="checkbox" @change="toggleDarkTheme" />
 		</div>
-		<div v-if="xenon.hasThemes && !xenon.disableThemeIgnore" class="force-theme-options toggle-option">
-			<label for="force-theme-toggle">{{ xenon.labels.forcedThemes }}</label>
+		<div v-if="yuu.hasThemes && !yuu.disableThemeIgnore" class="force-theme-options toggle-option">
+			<label for="force-theme-toggle">{{ yuu.labels.forcedThemes }}</label>
 			<input id="force-theme-toggle" v-model="ignoreForcedThemes" type="checkbox" @change="toggleForcedThemes" />
 		</div>
-		<div v-if="xenon.extraOptions && xenon.extraOptions.below" class="user-options-below">
-			<component :is="xenon.extraOptions.below" />
+		<div v-if="yuu.extraOptions && yuu.extraOptions.below" class="user-options-below">
+			<component :is="yuu.extraOptions.below" />
 		</div>
 	</div>
 </template>
 
 <script>
-import xenonConfig from '@theme/mixins/xenonConfig.js';
+import yuuConfig from '@theme/mixins/yuuConfig.js';
 import themeHandler from '@theme/mixins/themeHandler.js';
 import darkThemeHandler from '@theme/mixins/darkThemeHandler.js';
 
 export default {
 	name: 'ThemeOptions',
-	mixins: [xenonConfig, themeHandler, darkThemeHandler],
+	mixins: [yuuConfig, themeHandler, darkThemeHandler],
 };
 </script>
 

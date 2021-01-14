@@ -1,9 +1,27 @@
 module.exports = {
-	extends: 'sora/vue',
+	extends: 'aqua/vue',
 	rules: {
-		'vue/html-closing-bracket-newline': ['error', {
-			singleline: 'never',
-			multiline: 'always',
+		'brace-style': ['error', 'stroustrup'],
+		'comma-dangle': ['error', 'always-multiline'],
+		'radix': ['error', 'as-needed'],
+		'no-negated-condition': 'off',
+		'operator-linebreak': ['error', 'before'],
+		'quote-props': ['error', 'as-needed'],
+		'vue/max-attributes-per-line': ['error', {
+			singleline: 4,
+			multiline: {
+				max: 1,
+				allowFirstline: false
+			}
 		}],
-	}
+		'vue/html-self-closing': ['error', {
+			html: {
+				void: 'always',
+				normal: 'never',
+				component: 'always',
+			},
+		}],
+		'vue/require-default-prop': 'off',
+		'vue/require-prop-types': 'off',
+	},
 };
