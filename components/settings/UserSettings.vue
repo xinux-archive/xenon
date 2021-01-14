@@ -15,7 +15,7 @@
 import ClickOutside from 'vue-click-outside';
 import ThemeOptions from '@theme/components/settings/ThemeOptions.vue';
 import CogIcon from '@theme/components/settings/CogIcon.vue';
-import yuuConfig from '@theme/mixins/yuuConfig.js';
+import xenonConfig from '@theme/mixins/xenonConfig.js';
 
 export default {
 	name: 'UserSettings',
@@ -26,7 +26,7 @@ export default {
 		CogIcon,
 		ThemeOptions,
 	},
-	mixins: [yuuConfig],
+	mixins: [xenonConfig],
 	data() {
 		return {
 			showMenu: false,
@@ -34,8 +34,8 @@ export default {
 	},
 	computed: {
 		showSettings() {
-			const { yuu } = this;
-			return yuu.hasThemes || yuu.disableDarkTheme !== true || yuu.disableThemeIgnore !== true;
+			const { xenon } = this;
+			return xenon.hasThemes || xenon.disableDarkTheme !== true || xenon.disableThemeIgnore !== true;
 		},
 	},
 	methods: {
@@ -107,7 +107,7 @@ export default {
 	}
 }
 
-.yuu-theme-dark {
+.xenon-theme-dark {
 	.user-settings-menu {
 		background-color: $darkPrimaryBg;
 		border-color: $darkBorderColor;

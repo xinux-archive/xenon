@@ -4,7 +4,7 @@
 
 <script>
 import ParentLayout from '@parent-theme/layouts/404.vue';
-import yuuConfig from '@theme/mixins/yuuConfig.js';
+import xenonConfig from '@theme/mixins/xenonConfig.js';
 import themeHandler from '@theme/mixins/themeHandler.js';
 import darkThemeHandler from '@theme/mixins/darkThemeHandler.js';
 
@@ -12,7 +12,7 @@ export default {
 	components: {
 		ParentLayout,
 	},
-	mixins: [yuuConfig, themeHandler, darkThemeHandler],
+	mixins: [xenonConfig, themeHandler, darkThemeHandler],
 };
 </script>
 

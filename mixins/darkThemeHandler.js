@@ -7,8 +7,8 @@ export default {
 	},
 
 	mounted() {
-		if (this.yuu.disableDarkTheme !== true) {
-			if (this.yuu.defaultDarkTheme === true && !localStorage.getItem('dark-theme')) {
+		if (this.xenon.disableDarkTheme !== true) {
+			if (this.xenon.defaultDarkTheme === true && !localStorage.getItem('dark-theme')) {
 				localStorage.setItem('dark-theme', true);
 			}
 
@@ -16,7 +16,7 @@ export default {
 			this.toggleDarkTheme();
 		}
 
-		if (this.yuu.disableThemeIgnore !== true) {
+		if (this.xenon.disableThemeIgnore !== true) {
 			this.ignoreForcedThemes = localStorage.getItem('ignore-forced-themes') === 'true';
 		}
 	},
@@ -24,11 +24,11 @@ export default {
 	methods: {
 		toggleDarkTheme() {
 			if (this.darkTheme) {
-				document.body.classList.add('yuu-theme-dark');
+				document.body.classList.add('xenon-theme-dark');
 				return localStorage.setItem('dark-theme', true);
 			}
 
-			document.body.classList.remove('yuu-theme-dark');
+			document.body.classList.remove('xenon-theme-dark');
 			localStorage.setItem('dark-theme', false);
 		},
 
