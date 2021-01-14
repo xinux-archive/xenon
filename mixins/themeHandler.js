@@ -1,7 +1,7 @@
 export default {
 	mounted() {
-		if (this.xenon.defaultColorTheme !== 'default' && !localStorage.getItem('color-theme')) {
-			localStorage.setItem('color-theme', this.xenon.defaultColorTheme);
+		if (this.yuu.defaultColorTheme !== 'default' && !localStorage.getItem('color-theme')) {
+			localStorage.setItem('color-theme', this.yuu.defaultColorTheme);
 		}
 
 		this.setPageTheme();
@@ -13,12 +13,12 @@ export default {
 
 	methods: {
 		setTheme(theme, persist = true) {
-			const colorThemes = this.xenon.themes || {};
+			const colorThemes = this.yuu.themes || {};
 
 			if (!Array.isArray(colorThemes) || !colorThemes.length) return;
 
 			const classes = document.body.classList;
-			const themes = colorThemes.map(colorTheme => `xenon-theme-${colorTheme}`);
+			const themes = colorThemes.map(colorTheme => `yuu-theme-${colorTheme}`);
 
 			if (!theme) {
 				if (persist) localStorage.setItem('color-theme', 'default');
@@ -30,8 +30,8 @@ export default {
 				return this.setTheme(colorThemes.includes(oldTheme) ? oldTheme : null);
 			}
 
-			classes.remove(...themes.filter(t => t !== `xenon-theme-${theme}`));
-			classes.add(`xenon-theme-${theme}`);
+			classes.remove(...themes.filter(t => t !== `yuu-theme-${theme}`));
+			classes.add(`yuu-theme-${theme}`);
 
 			if (persist) localStorage.setItem('color-theme', theme);
 		},
@@ -40,7 +40,7 @@ export default {
 			const { forceTheme } = this.$page.frontmatter;
 			const colorTheme = localStorage.getItem('color-theme');
 			const ignoreForcedThemes = localStorage.getItem('ignore-forced-themes') === 'true';
-			const theme = this.xenon.disableThemeIgnore !== true && ignoreForcedThemes ? colorTheme : forceTheme || colorTheme;
+			const theme = this.yuu.disableThemeIgnore !== true && ignoreForcedThemes ? colorTheme : forceTheme || colorTheme;
 
 			this.setTheme(theme, false);
 		},

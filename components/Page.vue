@@ -11,12 +11,12 @@
 <script>
 import PageEdit from '@parent-theme/components/PageEdit.vue';
 import PageNav from '@parent-theme/components/PageNav.vue';
-import xenonConfig from '@theme/mixins/xenonConfig.js';
+import yuuConfig from '@theme/mixins/yuuConfig.js';
 import themeHandler from '@theme/mixins/themeHandler.js';
 
 export default {
 	components: { PageEdit, PageNav },
-	mixins: [xenonConfig, themeHandler],
+	mixins: [yuuConfig, themeHandler],
 	props: ['sidebarItems'],
 };
 </script>
