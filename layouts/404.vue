@@ -6,7 +6,7 @@
       <blockquote>{{ getMsg() }}</blockquote>
 
       <RouterLink to="/">
-          {{ getBtns() }}
+          → {{ getBtns() }}
       </RouterLink>
     </div>
   </div>
