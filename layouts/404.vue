@@ -1,17 +1,42 @@
 <template>
-	<ParentLayout />
+  <div class="theme-container">
+    <div class="theme-default-content">
+      <h1>404</h1>
+
+      <blockquote>{{ getMsg() }}</blockquote>
+
+      <RouterLink to="/">
+          {{ getBtns() }}
+      </RouterLink>
+    </div>
+  </div>
 </template>
 
 <script>
-import ParentLayout from '@parent-theme/layouts/404.vue';
 import xenonConfig from '@theme/mixins/xenonConfig.js';
 import themeHandler from '@theme/mixins/themeHandler.js';
 import darkThemeHandler from '@theme/mixins/darkThemeHandler.js';
 
+const msgs = [
+  `Chunaman, axir siz ham ataydan qilmadingizku!`,
+  `Odamam kelib kelib shu martasida adashadimi-a?`,
+  `O'ziyam yugurib kelib qovun qo'ydingizda...`
+]
+
+const btns = [
+  `Orqaga qayting...`,
+  `Choping`
+]
+
 export default {
-	components: {
-		ParentLayout,
-	},
+	methods: {
+		getMsg () {
+		  return msgs[Math.floor(Math.random() * msgs.length)]
+		},
+    getBtns () {
+      return btns[Math.floor(Math.random() * btns.length)]
+    }
+  },
 	mixins: [xenonConfig, themeHandler, darkThemeHandler],
 };
 </script>

@@ -1,10 +1,10 @@
 {
   "name": "vuepress-theme-xenon",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "description": "Xinux jamiyati websayti uchun yaratilgan shaxsiy website dizayn moduli",
   "keywords": [
     "vuepress",
-    "tema"
+    "theme"
   ],
   "main": "index.js",
   "repository": "https://github.com/xinuxuz/xenon.git",
