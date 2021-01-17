@@ -1,7 +1,7 @@
 <template>
 	<main class="page">
 		<slot name="top"></slot>
-		<Content class="theme-default-content"></Content>
+		<Content class="theme-default-content" />
 		<PageEdit />
 		<PageNav v-bind="{ sidebarItems }" />
 		<slot name="bottom"></slot>

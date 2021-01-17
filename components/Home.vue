@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import ParentHome from '@parent-theme/components/Home.vue'
+import ParentHome from '@parent-theme/components/Home.vue';
 
 export default {
 	components: {
 		ParentHome,
 	},
-}
+};
 </script>

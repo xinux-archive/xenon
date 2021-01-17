@@ -1,15 +1,15 @@
 <template>
-  <div class="theme-container">
-    <div class="theme-default-content">
-      <h1>404</h1>
+	<div class="theme-container">
+		<div class="theme-default-content">
+			<h1>404</h1>
 
-      <blockquote>{{ getMsg() }}</blockquote>
+			<blockquote>{{ getMsg() }}</blockquote>
 
-      <RouterLink to="/">
-          → {{ getBtns() }}
-      </RouterLink>
-    </div>
-  </div>
+			<RouterLink to="/">
+				→ {{ getBtns() }}
+			</RouterLink>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -18,26 +18,28 @@ import themeHandler from '@theme/mixins/themeHandler.js';
 import darkThemeHandler from '@theme/mixins/darkThemeHandler.js';
 
 const msgs = [
-  `Chunaman, axir siz ham ataydan qilmadingizku!`,
-  `Odamam kelib kelib shu martasida adashadimi-a?`,
-  `O'ziyam yugurib kelib qovun qo'ydingizda...`
-]
+	`Chunaman, axir siz ham ataydan qilmadingizku!`,
+	`Odamam kelib kelib shu martasida adashadimi-a?`,
+	`O'ziyam yugurib kelib qovun qo'ydingizda...`,
+];
 
 const btns = [
-  `Orqaga qayting...`,
-  `Choping`
-]
+	`Orqaga qayting...`,
+	`Choping`,
+	`O'ylab ko'ring`,
+	`Sinab ko'ring`,
+];
 
 export default {
-	methods: {
-		getMsg () {
-		  return msgs[Math.floor(Math.random() * msgs.length)]
-		},
-    getBtns () {
-      return btns[Math.floor(Math.random() * btns.length)]
-    }
-  },
 	mixins: [xenonConfig, themeHandler, darkThemeHandler],
+	methods: {
+		getMsg() {
+		  return msgs[Math.floor(Math.random() * msgs.length)];
+		},
+		getBtns() {
+			return btns[Math.floor(Math.random() * btns.length)];
+		},
+	},
 };
 </script>
 
