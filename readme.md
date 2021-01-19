@@ -21,11 +21,9 @@ module.exports = {
 };
 ```
 
-> Esda tuting! Plagin davomiy tarzda rivojlantirilmoqda, shuningdek xatolik kuzatilsa [anketa ochish](https://github.com/xinuxuz/xenon/issues/new) orqali habar qilish tavsiya etiladi.
+> **Esda tuting!** Plagin davomiy tarzda rivojlantirilmoqda, shuningdek xatolik kuzatilsa [anketa ochish](https://github.com/xinuxuz/xenon/issues/new) orqali habar qilish tavsiya etiladi.
 
 ---
-
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-footer-separator.svg?sanitize=true" /></p>
 
 <p align="center">Barcha huquqlar himoyalangan &copy; 2021 <a href="https://xinux.uz" target="_blank">Xinux Jamiyati</a></p>
 
