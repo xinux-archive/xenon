@@ -1,7 +1,6 @@
 <p align="center"><a href="https://xinux.uz" target="_blank"><img height="300" width="300" src="https://raw.githubusercontent.com/xinuxuz/docs/main/src/.vuepress/public/xinux.png"/></a></p>
 <h2 align="center">Xenon</h2>
 <p align="center"> VuePressda yozilgan <a href="https://xinux.uz" target="_blank">Xinux</a> componenti.</p>
-<p align="center">Tungi rejim, rangli opsiyalar va boshqalar.</p>
 
 VuePress uchun Xinux jamiyati websayti ga yozilgan component dizayn. Tungi ko'rinishga, rangli tanlov va boshqa foydali qulayliklariga egadir. VuePressning o'zini doimiy ko'rinishi ustiga qurilgan.
 
