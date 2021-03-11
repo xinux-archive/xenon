@@ -1,44 +1,67 @@
 export default {
-	data() {
-		return {
-			darkTheme: false,
-			ignoreForcedThemes: false,
-		};
-	},
+  data() {
+    return {
+      darkTheme: false,
+      ignoreForcedThemes: false,
+    }
+  },
 
-	mounted() {
-		if (this.xenon.disableDarkTheme !== true) {
-			if (this.xenon.defaultDarkTheme === true && !localStorage.getItem('dark-theme')) {
-				localStorage.setItem('dark-theme', true);
-			}
+  mounted() {
+    if (!this.xenon.disableDarkTheme) {
+      if (!this.xenon.defaultDarkTheme && !this.getItem('dark-theme')) {
+        this.setItem('dark-theme', true)
+      }
+      if (this.getItem('dark-theme')) {
+        this.darkTheme = true
+        this.toggleDarkTheme()
+      }
+    }
 
-			this.darkTheme = localStorage.getItem('dark-theme') === 'true';
-			this.toggleDarkTheme();
-		}
+    if (
+      !this.xenon.disableThemeIgnore
+      && this.getItem('ignore-forced-themes')
+    ) {
+      this.ignoreForcedThemes = true
+    }
+  },
 
-		if (this.xenon.disableThemeIgnore !== true) {
-			this.ignoreForcedThemes = localStorage.getItem('ignore-forced-themes') === 'true';
-		}
-	},
+  methods: {
+    /**
+     *
+     * @param {*} key
+     * @param {*} value
+     * @returns string
+     */
+    setItem(key, value) {
+      return localStorage.setItem(key, value)
+    },
+    /**
+     *
+     * @param {*} key
+     * @returns string
+     */
+    getItem(key) {
+      return localStorage.getItem(key)
+    },
+    // eslint-disable-next-line consistent-return
+    toggleDarkTheme() {
+      if (this.darkTheme) {
+        document.body.classList.add('xenon-theme-dark')
+        return this.setItem('dark-theme', true)
+      }
 
-	methods: {
-		toggleDarkTheme() {
-			if (this.darkTheme) {
-				document.body.classList.add('xenon-theme-dark');
-				return localStorage.setItem('dark-theme', true);
-			}
+      document.body.classList.remove('xenon-theme-dark')
+      this.setItem('dark-theme', false)
+    },
 
-			document.body.classList.remove('xenon-theme-dark');
-			localStorage.setItem('dark-theme', false);
-		},
+    // eslint-disable-next-line consistent-return
+    toggleForcedThemes() {
+      if (this.ignoreForcedThemes) {
+        this.setTheme(this.getItem('color-theme'))
+        return this.setItem('ignore-forced-themes', true)
+      }
 
-		toggleForcedThemes() {
-			if (this.ignoreForcedThemes) {
-				this.setTheme(localStorage.getItem('color-theme'));
-				return localStorage.setItem('ignore-forced-themes', true);
-			}
-
-			localStorage.removeItem('ignore-forced-themes');
-		},
-	},
-};
+      localStorage.removeItem('ignore-forced-themes')
+    },
+  },
+}
